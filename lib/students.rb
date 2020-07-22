@@ -13,9 +13,9 @@ def average_student_gpa
 end
 
 def total_tardies_for_all_students
-  "SELECT COUNT(*) FROM students"
+  "SELECT COUNT(tardies) FROM students WHEN grade > 8"
 end
 
 def average_gpa_for_9th_grade
-  "SELECT AVG(gpa) WHEN grade = 9 AS average_9th_grade_gpa FROM students"
+  "SELECT AVG(gpa) FROM students WHEN grade = 9"
 end
